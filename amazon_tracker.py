@@ -6,7 +6,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Scrape.do se mila hua aapka token yahan set ho gaya hai
-PROXY_TOKEN = "52e8bcfa096e4332bfb188ded9cd8c02a671373bf30"
+import os
+PROXY_TOKEN = os.environ.get("SCRAPE_DO_TOKEN")
 
 # Jis product ko track karna hai uski details
 PRODUCT_URL = "https://www.amazon.in/dp/B0CHX1W1XY"
@@ -56,7 +57,7 @@ def check_price():
 
 def send_mail(product_title, price):
     sender_email = "Sudhanshumaurya6633@gmail.com"
-    sender_password = "sipqaomocxsffxkh"
+PROXY_TOKEN = os.environ.get("SCRAPE_DO_TOKEN")
     receiver_email = "Sudhanshumaurya6633@gmail.com"
 
     msg = MIMEMultipart()
